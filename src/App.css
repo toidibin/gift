@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -29,4 +29,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1",Arial,sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: white;
+  font-size: 0.24rem;
 }
