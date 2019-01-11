@@ -52,7 +52,7 @@
   bottom: 0;
   width: 100%;
   height: 110px;
-  padding: 0 30px;
+  padding: 16px;
   text-align: center;
   box-sizing: border-box;
   background: white;
@@ -61,10 +61,25 @@
   flex-direction: column;
   justify-content: center;
 }
+.Home .foot .btn-group {
+  display: flex;
+}
+.Home .foot .btn-group .btn {
+  flex: 1;
+}
 .Home .foot .btn {
   height: 80px;
   line-height: 80px;
   font-size: 30px;
-  color: #2dab9a;
-  border: 1px solid #2dab9a;
+}
+:global .wrapModal img {
+  width: 100% !important;
+  min-height: 300px;
+  max-height: 720px;
+  margin-bottom: 10px;
+}
+:global .wrapModal .modBtn {
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
 }

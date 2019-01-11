@@ -47,10 +47,10 @@
 
         .myModal{
             width: 80%;
-						font-size: 30px;
-					
+						font-size: 30px;				
 						
-        }
+				}
+				
 		}
 		.am-modal-title{
 			font-size: 40px;
@@ -60,7 +60,7 @@
         bottom: 0;
 				width: 100%;
 				height: 110px;
-				padding: 0 30px;
+				padding: 16px;
         text-align: center;
         display: flex;
 				box-sizing: border-box;
@@ -69,13 +69,37 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				.btn-group{
+					display: flex;
+					.btn{   
+						flex: 1;
+						// color: white;
+					}
+				}
         .btn{            
             height: 80px;
             line-height: 80px;
 						font-size: 30px;
-						color: #2dab9a;
-						border: 1px solid #2dab9a;
+						// color: #2dab9a;
+						// border: 1px solid #2dab9a;
         }
-    }
+		}
+		
     
+}
+:global {
+	.wrapModal{
+		img{
+			width: 100% !important;
+			min-height: 300px;
+			max-height: 720px;
+			margin-bottom: 10px;
+		}
+		.modBtn{
+			height: 80px;
+			line-height: 80px;
+			font-size: 30px;
+					
+		}
+	}
 }

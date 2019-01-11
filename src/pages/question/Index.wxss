@@ -1,0 +1,43 @@
+.Question {
+  text-align: left;
+  font-size: 32px;
+  height: 100%;
+  height: 100vh;
+  background: #f7f7f7;
+}
+.Question .logo {
+  height: 360px;
+  overflow: hidden;
+}
+.Question .logo img {
+  width: 100%;
+}
+.Question .btn {
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
+  margin-top: 30px;
+  color: white;
+  background: #2dab9a;
+}
+.Question .wrap {
+  padding: 16px;
+  padding-bottom: 120px;
+}
+.Question .wrap .item {
+  margin-top: 20px;
+}
+.Question .wrap .item .qtitle {
+  margin: 10px 0;
+  font-size: 28px;
+}
+.Question .wrap .myModal {
+  width: 80%;
+  font-size: 30px;
+}
+:global .am-list-item.am-input-item {
+  height: 70px;
+}
+:global .am-list-item.am-input-item .am-input-control input {
+  font-size: 26px;
+}

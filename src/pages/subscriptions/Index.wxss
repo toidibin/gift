@@ -1,0 +1,70 @@
+.Subscribe {
+  text-align: left;
+  font-size: 32px;
+  height: 100%;
+  height: 100vh;
+  background: #f7f7f7;
+}
+.Subscribe .logo {
+  max-height: 800px;
+  overflow: scroll;
+}
+.Subscribe .logo img {
+  width: 100%;
+}
+.Subscribe .btn-group {
+  display: flex;
+  margin-top: 20px;
+}
+.Subscribe .btn-group .btn {
+  height: 80px;
+  flex: 1;
+  line-height: 80px;
+  font-size: 30px;
+}
+.Subscribe .btn-group .btn2 {
+  height: 80px;
+  flex: 1;
+  line-height: 80px;
+  font-size: 30px;
+  border-color: #2dab9a;
+}
+.Subscribe .wrap {
+  padding: 16px;
+  padding-bottom: 120px;
+}
+.Subscribe .wrap .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 10px 0;
+}
+.Subscribe .wrap .stitle {
+  font-size: 30px;
+  color: #666;
+  margin: 16px 0;
+}
+.Subscribe .wrap .myModal {
+  width: 80%;
+  font-size: 30px;
+}
+:global .am-list-item.am-input-item {
+  height: 70px;
+}
+:global .am-list-item.am-input-item .am-input-control input {
+  font-size: 26px;
+}
+:global .am-modal-transparent {
+  font-size: 26px;
+  width: 60%;
+}
+:global .am-modal-transparent .am-modal-alert-content {
+  font-size: 26px;
+  padding: 20px 0;
+}
+:global .am-modal-transparent .am-modal-title {
+  font-size: 26px;
+}
+:global .am-modal-transparent .am-modal-button {
+  font-size: 26px;
+}
