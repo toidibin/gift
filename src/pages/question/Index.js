@@ -24,7 +24,8 @@ class Question extends Component {
 			if(user && id){
 				http.get(`/gift/${id}?user=${user}`).then(res => {
 					console.dir(res)
-					if(res.code == 0) {
+					// eslint-disable-next-line
+					if(res.code == 0) { 
 						this.setState({
 							info: res.data
 						})

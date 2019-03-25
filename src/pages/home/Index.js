@@ -26,6 +26,7 @@ class Home extends Component {
 			if(user && id){
 				http.get(`/gift/${id}?user=${user}`).then(res => {
 					console.dir(res)
+					// eslint-disable-next-line
 					if(res.code == 0) {
 						this.setState({
 							info: res.data
@@ -66,6 +67,7 @@ class Home extends Component {
 
   getAward = () =>{  	
 		http.post('/reward/',{user: 'dddeaea99dcc4149bd82fa123180d479', activity: 2}).then(res => {
+			// eslint-disable-next-line
 			if(res.code == 0) {
 				this.setState({
 					award: res.data.award,
@@ -137,13 +139,14 @@ class Home extends Component {
 												<span>剩余数量     </span>
 												<span>{this.state.info.page.total_number - this.state.info.page.take_number}   </span>             
 											</div>
-											{ this.state.info.page.gift_type == 3 && this.state.info.reward_status == 2 && 
+											
+											{ this.state.info.page.gift_type === 3 && this.state.info.reward_status === 2 && 
 											<div className="item">
 												<span>领取状态     </span>
 												<span style={{color: '#f7c56c'}}>已领取   </span>             
 											</div>
 											}
-											{ this.state.info.page.gift_type != 3 && this.state.info.reward_status == 2 && 
+											{ this.state.info.page.gift_type !== 3 && this.state.info.reward_status === 2 && 
 											<div className="item">
 												<span>链接     </span>
 												<a style={{color: '#f7c56c'}} href={this.state.info.award}>点击这里   </a>             
@@ -152,24 +155,23 @@ class Home extends Component {
 											<div className="rule">
 													<h5>活动规则</h5>
 													<div>
-														<img src={this.state.info.page.rule_image} />
+														<img src={this.state.info.page.rule_image} alt=""/>
 													</div>
 											</div>
-					
           </div>
 				
           <div className="foot">
-						{this.state.info && this.state.info.reward_status == 0 &&  (// 未达标
+						{this.state.info && this.state.info.reward_status === 0 &&  (// 未达标
 							<div className="btn-group">
 								 	<Button type="ghost" onClick={() => this.toOutLink(this.state.info.page.fail_minor_redirect)} className="btn" size="large" inline>{this.state.info.page.fail_minor_button}</Button>
 									&nbsp;&nbsp;<Button type="primary" onClick={() => this.toOutLink(this.state.info.page.fail_main_redirect)} className="btn" size="large" inline>{this.state.info.page.fail_main_button}</Button>
 							</div>
            
 						)}
-						{this.state.info && this.state.info.reward_status == 1 &&  // 已达标 可领取
+						{this.state.info && this.state.info.reward_status === 1 &&  // 已达标 可领取
             	<Button type="ghost" onClick={() => this.getAward()} className="btn" size="large" inline>{this.state.info.page.success_button}</Button>
 						}
-						{this.state.info && this.state.info.reward_status == 2 &&  // 已领取
+						{this.state.info && this.state.info.reward_status === 2 &&  // 已领取
 							<Button type="ghost" onClick={() => this.setState({showHadAwardMod: true})} className="btn" size="large" inline>{this.state.info.page.has_get_button}</Button>
 						}
           </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Index.less';
 import http from '../../Axios'
-import {Button,InputItem,Modal} from 'antd-mobile';
+import {Button,Modal} from 'antd-mobile';
 import {getQueryString} from '../../utils/tools.js'
 
 class Question extends Component {
@@ -16,7 +16,7 @@ class Question extends Component {
 	componentDidMount() {		
 		http.get('/subscribe/').then(res => {
 			console.dir(res)
-			if(res.code == 0) {
+			if(res.code === 0) {
 				this.setState({
 					info: res.data
 				})
@@ -40,7 +40,7 @@ class Question extends Component {
 		const alert = Modal.alert;
 		if(code){
 			http.post('/subscribe/',{code}).then(res => {			
-				if(res.code == 0){
+				if(res.code === 0){
 					alert('提示', '订阅成功', [					
 						{ text: 'OK', onPress: () => console.log('ok') },
 					]);
@@ -68,8 +68,8 @@ class Question extends Component {
 									<img src={this.state.info.picture} alt="logo" />
 								</div>
 								<div className="btn-group">
-									<Button type="ghost" size="large" className="btn2" onClick={() => window.history.go(-1)}>{this.state.info.left_button}</Button>
-									&nbsp;&nbsp;&nbsp;&nbsp;
+									{/* <Button type="ghost" size="large" className="btn2" onClick={() => window.history.go(-1)}>{this.state.info.left_button}</Button>
+									&nbsp;&nbsp;&nbsp;&nbsp; */}
 									<Button type="primary" size="large" className="btn" onClick={() => this.subscribe()}>{this.state.info.right_button}</Button>
 								</div>
 							</div>

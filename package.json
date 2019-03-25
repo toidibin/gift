@@ -63,7 +63,12 @@
     "test": "react-app-rewired test --env=jsdom"
   },
   "eslintConfig": {
-    "extends": "react-app"
+		"extends": "react-app",
+		"rules": {
+			"no-undef": "off",
+      "no-restricted-globals": "off",
+      "no-unused-vars": "off"
+		}
   },
   "browserslist": [
     ">0.2%",
@@ -80,7 +85,7 @@
     "qs": "^6.6.0",
     "react-app-rewired": "^2.0.1"
   },
-  "proxy": "http://deven.s1.natapp.cc",
+  "proxy": "http://www.kaobeibei.xyz",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
